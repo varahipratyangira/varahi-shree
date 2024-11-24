@@ -90,6 +90,10 @@ resource "aws_eks_cluster" "badhrakali" {
     subnet_ids         = aws_subnet.badhrakali_subnet[*].id
     security_group_ids = [aws_security_group.badhrakali_cluster_sg.id]
   }
+
+  tags = {
+    Name = "badhrakali-cluster"
+  }
 }
 
 resource "aws_eks_node_group" "badhrakali" {
@@ -110,4 +114,9 @@ resource "aws_eks_node_group" "badhrakali" {
     ec2_ssh_key = var.ssh_public_key
     source_security_group_ids = [aws_security_group.badhrakali_node_sg.id]
   }
+
+  tags = {
+    Name = "badhrakali-node-group"
+  }
 }
+
