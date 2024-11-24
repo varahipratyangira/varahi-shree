@@ -1,0 +1,32 @@
+# Terraform State Files
+*.tfstate
+*.tfstate.*
+
+# Terraform Crash Logs
+crash.log
+
+# Ignore Terraform variable override files
+# These files can contain sensitive information such as access keys
+*.tfvars
+*.tfvars.json
+
+# Ignore backup files created by Terraform
+*.backup
+
+# Ignore .terraform directory (contains Terraform modules and plugins)
+.terraform/
+.terraform.lock.hcl
+
+# Ignore files related to editor or OS-specific temp files
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore log files
+*.log
+
+# Ignore SSH keys and sensitive files
+*.pem
+*.pub
