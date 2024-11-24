@@ -5,10 +5,10 @@
 # Terraform Crash Logs
 crash.log
 
-# Ignore Terraform variable override files
-# These files can contain sensitive information such as access keys
-*.tfvars
-*.tfvars.json
+# Ignore sensitive tfvars files
+*.auto.tfvars
+*.prod.tfvars
+*.dev.tfvars
 
 # Ignore backup files created by Terraform
 *.backup
